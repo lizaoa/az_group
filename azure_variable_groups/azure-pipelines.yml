@@ -15,7 +15,7 @@ jobs:
     - script: |
         echo $(job_name)
         echo %REGION%
-        echo $( STATE_BUCKET )
-        echo $(INSTANCE_SIZE)
-        echo $(tmdxx)
+        echo $(STATE_BUCKET)
+        echo $(variables.INSTANCE_SIZE)
+        echo ${{ variables.tmdxx }}
       displayName: 'Show Variable Values'
