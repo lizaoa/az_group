@@ -1,5 +1,9 @@
 pool:
-  vmImage: windows-latest
+  #vmImage: windows-latest
+  name: my-win-pool
+
+trigger:
+  none
 
 jobs:
 - job: build_VirW
@@ -12,5 +16,5 @@ jobs:
         echo $(job_name)
         echo %REGION%
         echo $env:STATE_BUCKET
-        echo $INSTANCE_SIZE
+        echo $(INSTANCE_SIZE)
       displayName: 'Show Variable Values'
