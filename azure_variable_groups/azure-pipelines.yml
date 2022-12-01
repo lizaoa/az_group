@@ -1,5 +1,4 @@
-pool:
-  name: my-win-pool
+
 jobs:
 - job: build_Virginia
   variables:
