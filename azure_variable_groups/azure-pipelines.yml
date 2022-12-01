@@ -1,8 +1,8 @@
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
 jobs:
-- job: build_Vir
+- job: build_VirW
   variables:
   - group: dev_us-east-1
   - name: job_name
