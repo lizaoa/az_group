@@ -15,6 +15,6 @@ jobs:
     - script: |
         echo $(job_name)
         echo %REGION%
-        echo $env:STATE_BUCKET
+        echo $( STATE_BUCKET)
         echo $(INSTANCE_SIZE)
       displayName: 'Show Variable Values'
