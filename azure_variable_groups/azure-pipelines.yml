@@ -10,7 +10,7 @@ jobs:
   steps:
     - script: |
         echo $(job_name)
-        echo $REGION
-        echo $STATE_BUCKET
+        echo %REGION%
+        echo $env:STATE_BUCKET
         echo $INSTANCE_SIZE
       displayName: 'Show Variable Values'
