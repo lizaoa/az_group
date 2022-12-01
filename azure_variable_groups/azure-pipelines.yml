@@ -1,3 +1,5 @@
+pool:
+  -vmimage: ubuntu-latest
 
 jobs:
 - job: build_Virginia
