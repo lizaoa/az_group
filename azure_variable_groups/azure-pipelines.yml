@@ -17,4 +17,5 @@ jobs:
         echo %REGION%
         echo $( STATE_BUCKET)
         echo $(INSTANCE_SIZE)
+        echo $(tmdxx)
       displayName: 'Show Variable Values'
