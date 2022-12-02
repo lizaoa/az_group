@@ -15,5 +15,5 @@ steps:
   inputs:
     targetType: 'inline'
     script: gci $env:AGENT_SOURCESDIRECTORY
-- powershell: write-host com is $env:AGENT_NAME
+- powershell: write-host com is $env:AGENT_SOURCESDIRECTORY
 #- powershell: Write-HOST $(AGENT_SOURCESDIRECTORY)
