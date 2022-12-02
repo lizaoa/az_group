@@ -7,7 +7,7 @@ pool:
 
 steps:
 
-- powershell: |
+- bash: |
     write-host "Using an input-macro works: $(mySecret)"
     write-host "Using the env var directly does not work: $MYSECRET"
     write-host "Using a global secret var mapped in the pipeline does not work either: $GLOBAL_MYSECRET"
