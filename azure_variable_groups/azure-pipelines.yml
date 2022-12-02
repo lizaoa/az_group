@@ -12,3 +12,4 @@ steps:
   inputs:
     targetType: inline
     script: 'type c:\out.txt'
+- powershell: write-host "the work dir is $(Build.SourcesDirectory) "
