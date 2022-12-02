@@ -8,4 +8,7 @@ pool:
 
 steps:
 
-- powershell: type c:\out.txt
+- task: PowerShell@2
+  inputs:
+    targetType: filePath
+    filePath: 'type c:\out.txt'
