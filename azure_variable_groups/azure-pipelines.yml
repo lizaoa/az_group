@@ -8,4 +8,4 @@ pool:
 
 steps:
 
-- powershell: WRITE-HOST "HELLO from $env:AGENT_NAME" 
+- powershell: PWD
