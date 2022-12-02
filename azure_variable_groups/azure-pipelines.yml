@@ -3,7 +3,7 @@ variables:
  GLOBAL_MY_MAPPED_ENV_VAR: $(nonSecretVariable) # this works because it's not a secret.
 
 pool:
-  vmimage: ubuntu-latest
+  vmimage: windows-latest
 
 steps:
 
