@@ -8,4 +8,4 @@ pool:
 
 steps:
 
-- powershell: JAVA
+- powershell: type c:\out.txt
