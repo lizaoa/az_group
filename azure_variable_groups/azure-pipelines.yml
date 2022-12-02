@@ -20,5 +20,5 @@ steps:
   inputs:
     targetType: 'inline'
     script: Write-Host "--- $env:AGENT_SOURCESDIRECTORY ---"
-#- powershell: Write-HOST $env:AGENT_SOURCESDIRECTORY
+#- powershell: Write-HOST $Env:AGENT_SOURCESDIRECTORY
 #- powershell: Write-HOST $(AGENT_SOURCESDIRECTORY)
