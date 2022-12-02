@@ -8,6 +8,8 @@ pool:
 steps:
 
 - powershell: |
+    Write-Host "Using an macro for secret: $(GLOBAL_MYSECRET)"
+    Write-Host "Using an macro for non-secret: $(GLOBAL_MY_MAPPED_ENV_VAR)"
     Write-Host "Using an input-macro works: $(mySecret)"
     Write-Host "Using the env var directly does not work: $env:MYSECRET"
     Write-Host "Using a global secret var mapped in the pipeline does not work either: $env:GLOBAL_MYSECRET"
