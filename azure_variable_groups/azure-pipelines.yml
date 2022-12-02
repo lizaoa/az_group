@@ -4,7 +4,7 @@ variables:
 
 pool:
   #vmimage: ubuntu-latest
-  $name: my-win-pool
+  name: my-win-pool
 
 steps:
 - task: PowerShell@2
