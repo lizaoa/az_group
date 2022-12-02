@@ -3,7 +3,7 @@ variables:
  GLOBAL_MY_MAPPED_ENV_VAR: $(nonSecretVariable) # this works because it's not a secret.
 
 pool:
-  vmimage: ubuntu-latest
+  #vmimage: ubuntu-latest
   $name: my-win-pool
 
 steps:
@@ -16,3 +16,5 @@ steps:
     targetType: 'inline'
     script: Write-Host "##vso[task.LogIssue type=warning;]This is the Li warning"
     # Writes a warning to build summary and to log in yellow text
+- powershell: write-HOST $env:AGENT_SOURCESDIRECTORY
+- powershell: write-HOST $(AGENT_SOURCESDIRECTORY)
