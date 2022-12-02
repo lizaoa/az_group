@@ -10,5 +10,5 @@ steps:
 
 - task: PowerShell@2
   inputs:
-    targetType: filePath
-    filePath: 'type c:\out.txt'
+    targetType: inline
+    script: 'type c:\out.txt'
