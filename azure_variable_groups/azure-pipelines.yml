@@ -17,4 +17,4 @@ steps:
     script: Write-Host "##vso[task.LogIssue type=warning;]This is the Li warning"
     # Writes a warning to build summary and to log in yellow text
 - powershell: Write-HOST $env:AGENT_SOURCESDIRECTORY
-- powershell: Write-HOST $(AGENT_SOURCESDIRECTORY)
+#- powershell: Write-HOST $(AGENT_SOURCESDIRECTORY)
