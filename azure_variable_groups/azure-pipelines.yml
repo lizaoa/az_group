@@ -2,7 +2,8 @@ variables:
  GLOBAL_MYSECRET: $(mySecret) # this will not work because the secret variable needs to be mapped as env
  GLOBAL_MY_MAPPED_ENV_VAR: $(nonSecretVariable) # this works because it's not a secret.
 
-
+pool:
+ name: my-win-pool
 
 steps:
 
