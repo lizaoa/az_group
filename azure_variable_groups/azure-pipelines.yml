@@ -7,5 +7,8 @@ pool:
   #name: my-win-pool
 
 steps:
-
+- task: PowerShell@2
+  inputs:
+    targetType: inline
+    script: 'dir'
 - powershell: write-host "the work dir is $(Build.SourcesDirectory) "
