@@ -4,6 +4,8 @@
 pool:
   vmimage: ubuntu-latest
   #name: my-win-pool
+trigger:
+  none
 
 stages:
 - stage: one
