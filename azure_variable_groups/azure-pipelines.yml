@@ -7,4 +7,5 @@ pool:
 steps:
 - task: MyTask@1  # this step generates the output variable
   name: ProduceVar  # because we're going to depend on it, we need to name the step
-- script: echo $(ProduceVar.MyVar) # this step uses the output variable
+  inputs:
+    myVar: "what is it?"   
