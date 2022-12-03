@@ -18,5 +18,5 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: Write-Host "##vso[task.LogIssue type=error;]This is LL the error"
+    script: Write-Host "##vso[task.LogIssue type=warning;]This is L6L the warning..."
     # Writes an error to build summary and to log in red text
