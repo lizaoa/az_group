@@ -1,4 +1,4 @@
 ## script-b.sh
 echo 'Hello file version'
 echo $env:SKIPME
-echo %stageSauce%
+WRITE-HOST %STAGESAUCE%
