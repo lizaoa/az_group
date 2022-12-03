@@ -28,9 +28,9 @@ stages:
       - name: skipMe
         value: $[ stageDependencies.one.A.outputs['skipstep.skipsubsequent'] ]
     steps:
-    - task: Bash@3
+    - task: PowerShell@2
       inputs:
-        filePath: 'script-b.sh'
+        filePath: 'script-b.ps1'
       name: fileversion
       env:
         StageSauce: $(StageSauce) # predefined in variables section
