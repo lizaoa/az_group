@@ -11,6 +11,6 @@ steps:
   inputs:
    targetType: inline
    script: |
-     $uri = abc $(GLOBAL_MY_MAPPED_ENV_VAR)
+     $uri = "abc $(GLOBAL_MY_MAPPED_ENV_VAR)"
      write-host $uri
   displayName: this is a test ss
