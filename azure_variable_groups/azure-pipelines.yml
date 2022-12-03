@@ -27,6 +27,6 @@ steps:
 
         # Output releases in JSON
         Write-Host "resulsssst is $result.value"
-        write-host "tttt is $(AGENT_WORKFOLDER_VALUE)"
+        write-host "tttt is $(AGENT_WORKFOLDER.VALUE)"
   env:
     MY_MAPPED_TOKEN: $(token) # Maps the secret variable $(token) from my-var-group
