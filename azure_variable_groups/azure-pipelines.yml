@@ -17,7 +17,7 @@ stages:
     - bash: |
        echo "##vso[task.setvariable variable=skipsubsequent;isOutput=true]true"
       name: skipstep
-    - bash: echo "test is \:$(setvar.source)"
+    - bash: echo test is  $(setvar.sauce)
 
 - stage: two
   jobs:
