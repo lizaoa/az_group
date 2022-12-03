@@ -12,5 +12,5 @@ steps:
   inputs:
     targetType: 'inline'
     script: gci $env:AGENT_SOURCESDIRECTORY
-- powershell: write-host com is $(System.DefaultWorkingDirectory)
+- powershell: write-host com is $env:SYSTEM_DEFAULTWORKINGDIRECTORY
 #- powershell: Write-HOST $(AGENT_SOURCESDIRECTORY)
