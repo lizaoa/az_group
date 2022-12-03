@@ -26,6 +26,6 @@ steps:
         $result = Invoke-RestMethod -Uri $uri -Method Get -ContentType "application/json" -Headers @{Authorization=("Basic {0}" -f $base64AuthInfo)}
 
         # Output releases in JSON
-        Write-Host $result.value
+        Write-Host "resulsssst is $result.value"
   env:
     MY_MAPPED_TOKEN: $(token) # Maps the secret variable $(token) from my-var-group
