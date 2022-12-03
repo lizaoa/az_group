@@ -2,7 +2,7 @@
 ## azure-pipelines.yml
 
 pool:
-  vmimage: ubuntu-latest
+  vmimage: windows-latest
   #name: my-win-pool
 
 stages:
