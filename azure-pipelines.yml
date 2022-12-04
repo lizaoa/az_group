@@ -25,7 +25,7 @@ jobs:
   pool:
     vmImage: ubuntu-latest
   variables:
-    myVarFromJobADebug: $[ dependencies.A.outputs[matrix.setvarStep.myOutputVar'] ]
+    myVarFromJobADebug: $[ dependencies.A.outputs[setvarStep.myOutputVar'] ]
   steps:
   - script: echo $(myVarFromJobADebug)
     name: echovar
