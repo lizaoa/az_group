@@ -3,8 +3,7 @@ jobs:
   variables:
     a: 10
   steps:
-  - bash: |
-      echo $(a)            # This will be 10
-      echo '##vso[task.setvariable variable=a]20'
-      echo $(a)            # This will also be 10, since the expansion of $(a) happens before the step
-  - bash: echo $(a)        # This will be 20, since the variables are expanded just before the step  
+  - script: echo $(a)
+  - script: echo '##vso[task.setvariable variable=a]20'
+  - script: echo $(a) 
+  - script: echo $(a)
