@@ -4,7 +4,7 @@ jobs:
 - job: A
   pool:
     vmImage: 'ubuntu-18.04'
-  #  parallel: 1 # Two slices
+    parallel: 1 # Two slices
   steps:
   - bash: echo "##vso[task.setvariable variable=myOutputVar;isOutput=true]this is the slice $(system.jobPositionInPhase) value"
     name: setvarStep
@@ -17,8 +17,8 @@ jobs:
   pool:
     vmImage: 'ubuntu-18.04'
   variables:
-    myVarFromJobsA1: $[ dependencies.A.outputs['job.1.setvarStep.myOutputVar'] ]
-    myVarFromJobsA0: $[ dependencies.A.outputs['job.0.setvarStep.myOutputVar'] ]
+    myVarFromJobsA1: $[ dependencies.A1.outputs['setvarStep.myOutputVar'] ]
+    myVarFromJobsA0: $[ dependencies.A0.outputs['setvarStep.myOutputVar'] ]
     myVarFromJobsA: $[ dependencies.A.outputs['setvarStep.myOutputVar'] ]
   steps:
   - script: |
