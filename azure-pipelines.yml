@@ -5,7 +5,7 @@ jobs:
   steps:
   - script: echo $(a)
     displayName: 1 -- ci
-  - powershell: |
+  - script: |
       echo '##vso[task.setvariable variable=a]20'
       echo $(a) 
     displayName: 23 --- ci
