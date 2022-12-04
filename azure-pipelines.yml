@@ -4,10 +4,10 @@ jobs:
     a: 10
   steps:
   - script: echo $(a)
-    displayName: 1 -- ci
-  - script: |
+    displayName: a1 -- ci
+  - powershell: |
       echo '##vso[task.setvariable variable=a]20'
       echo $(a) 
-    displayName: 23 --- ci
+    displayName: a23 --- ci
   - powershell: echo $(a)
-    displayName: 4 --- ci
+    displayName: a4 --- ci
