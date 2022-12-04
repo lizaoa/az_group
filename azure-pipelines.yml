@@ -4,7 +4,7 @@ variables:
 steps:
   
   - bash: echo "the first is " $(a1)
-  - bash: echo "##vso[task.setvariable variable=a1]crushed tomatoes"
+  - bash: echo "##vso[task.setvariable variable=a1;isoutput=true]crushed tomatoes"
     name: abc
-  - script:  echo "after set is " $(abc.a1)
+  - script:  echo "after set is " $[ abc.a1 ]
     displayName: test for set
