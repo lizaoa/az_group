@@ -16,3 +16,4 @@ jobs:
   steps:
   - script: echo $(myVarFromJobA)
     name: echovar
+  - script: echo OOOOO IS $(myOutputVar)
