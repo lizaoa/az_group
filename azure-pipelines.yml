@@ -7,7 +7,6 @@ jobs:
     displayName: 1 -- ci
   - bash: |
       echo '##vso[task.setvariable variable=a]20'
-      displayName: 2 --- ci
       echo $(a) 
       displayName: 23 --- ci
   - powershell: echo $(a)
