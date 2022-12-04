@@ -18,6 +18,11 @@ jobs:
     vmImage: 'ubuntu-18.04'
   variables:
     myVarFromJobsA1: $[ dependencies.A.outputs['job1.setvarStep.myOutputVar'] ]
+    myVarFromJobsA0: $[ dependencies.A.outputs['job0.setvarStep.myOutputVar'] ]
+    myVarFromJobsA: $[ dependencies.A.outputs['job.setvarStep.myOutputVar'] ]
   steps:
-  - script: "echo $(myVarFromJobsA1)"
+  - script: |
+       echo $(myVarFromJobsA1)
+       echo $(myVarFromJobsA0)
+       echo $(myVarFromJobsA)
     name: echovar
