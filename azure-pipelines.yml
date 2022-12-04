@@ -5,9 +5,9 @@ jobs:
   steps:
   - script: echo $(a)
     displayName: a1 -- ci
-  - powershell: |
+  - pwsh: |
       echo '##vso[task.setvariable variable=a]20'
       echo $(a) 
     displayName: a23 --- ci
-  - powershell: echo $(a)
+  - pwsh: echo $(a)
     displayName: a4 --- ci
