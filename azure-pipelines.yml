@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- secbranch
+- azure-pipelines
 
 pool:
   vmImage: ubuntu-latest
