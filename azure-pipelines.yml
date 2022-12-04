@@ -19,7 +19,7 @@ jobs:
   variables:
     myVarFromJobsA1: $[ dependencies.A.outputs['job.1.setvarStep.myOutputVar'] ]
     myVarFromJobsA0: $[ dependencies.A.outputs['job.0.setvarStep.myOutputVar'] ]
-    myVarFromJobsA: $[ dependencies.A.outputs['job.setvarStep.myOutputVar'] ]
+    myVarFromJobsA: $[ dependencies.A.outputs['setvarStep.myOutputVar'] ]
   steps:
   - script: |
        echo $(myVarFromJobsA1)
