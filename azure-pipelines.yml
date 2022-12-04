@@ -1,19 +1,31 @@
 jobs:
-# Set an output variable from job A
+
+# Set an output variable from a job with a matrix
 - job: A
+  pool:
+    vmImage: 'ubuntu-18.04'
+  strategy:
+    maxParallel: 2
+    matrix:
+      debugJob:
+        configuration: debug
+        platform: x64
+      releaseJob:
+        configuration: release
+        platform: x64
   steps:
-  - powershell: echo "##vso[task.setvariable variable=myOutputVar;isOutput=true]thaa is the value"
+  - bash: echo "##vso[task.setvariable variable=myOutputVar;isOutput=true]this is the $(configuration) value"
     name: setvarStep
-  - script: echo $(setvarStep.myOutputVar)
+  - bash: echo $(setvarStep.myOutputVar)
     name: echovar
 
-# Map the variable into job B
+# Map the variable from the debug job
 - job: B
   dependsOn: A
+  pool:
+    vmImage: 'ubuntu-18.04'
   variables:
-    myVarFromJobA: $[ dependencies.A.outputs['setvarStep.myOutputVar'] ]  # map in the variable
-                                                                          # remember, expressions require single quotes
+    myVarFromJobADebug: $[ dependencies.A.outputs['debugJob.setvarStep.myOutputVar'] ]
   steps:
-  - script: echo $(myVarFromJobA)
+  - script: echo $(myVarFromJobADebug)
     name: echovar
-  - script: echo OOOOO IS $(myOutputVar)
