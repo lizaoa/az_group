@@ -10,7 +10,7 @@ trigger:
 stages:
 - stage: one
   jobs:
-  - job: A
+  - job:  A
     steps:
     - task: Bash@3
       inputs:
