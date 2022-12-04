@@ -2,8 +2,9 @@ variables:
    a1: this is first
 
 steps:
-  - bash: |
-      echo "the first is " $(a1)
-      echo "##vso[task.setvariable variable=a1;isoutput=true]crushed tomatoes"
-      echo "after set is " $(a1)
+  
+  - echo "the first is " $(a1)
+  - echo "##vso[task.setvariable variable=a1]crushed tomatoes"
+    name: abc
+  - script:  echo "after set is " $(abc.a1)
     displayName: test for set
