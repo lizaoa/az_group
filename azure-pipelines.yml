@@ -19,4 +19,4 @@ steps:
 # before handing the body of the script to the shell.
 - bash: |
     echo my pipeline variable is $(sauce)
-- bash: echo yyyyy $SAUCE
+- bash: echo yyyyy $SAUcE
