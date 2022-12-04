@@ -8,6 +8,6 @@ jobs:
   - pwsh: |
       echo '##vso[task.setvariable variable=a]20'
       echo $(a) 
-    displayName: a23 --- ci
+    displayName: a23 --- ci --
   - pwsh: echo $(a)
     displayName: a4 --- ci
