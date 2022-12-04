@@ -4,6 +4,8 @@ jobs:
     a: 10
   steps:
   - script: echo $(a)
-  - script: echo '##vso[task.setvariable variable=a]20'
+    displayName: 1 -- ci
+  - bash: echo '##vso[task.setvariable variable=a]20'
+    displayName: 2 --- ci
   - script: echo $(a) 
   - script: echo $(a)
