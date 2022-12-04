@@ -4,6 +4,6 @@ variables:
 steps:
   
   - bash: echo "the first is " $(a1)
-  - bash: echo "##vso[task.setvariable variable=a1]crushed tomatoes"
+  - bash: echo "##vso[task.setvariable variable=a1;isoutput=true]crushed tomatoes"
   - bash:  echo "after set is " $(a1)
   - bash:  echo "back is " ${{variables.a1}}    
