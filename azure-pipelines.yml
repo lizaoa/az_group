@@ -6,7 +6,7 @@ steps:
       Write-Host "$env:ASYSTEM_ACCESSTOKEN = $(System.AccessToken)"
       write-host  $(Agent.BuildDirectory) or $env:AGENT_BUILDDIRECTORY
       write-host  $(Build.ArtifactStagingDirectory) -- $(Build.BinariesDirectory) 
-      write-host  $(Build.SourceBranchName) -- $(Common.TestResultsDirectory)--$(Strategy.Name)
+      write-host  $(Build.SourceBranchName) -- $(Common.TestResultsDirectory)--$(System.JobName)
     env:
       ASYSTEM_ACCESSTOKEN: $(System.AccessToken)
       #AGENT.BUILDDIRECTORY: $(Agent.BuildDirectory)
