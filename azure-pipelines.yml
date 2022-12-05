@@ -48,7 +48,7 @@ steps:
     echo "contososecret=$(vcontososecret)"
     echo
     echo "Count up to the value of the variable group's nonsecret variable *a*:"
-    for number in {1..$(va)}
+    for number in {1..5}
     do
         echo "$number"
     done
