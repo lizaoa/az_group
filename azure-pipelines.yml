@@ -1,67 +1,9 @@
-parameters:
-- name: image
-  displayName: 'Pool image'
-  default: ubuntu-latest
-  values:
-  - windows-latest
-  - windows-latest
-  - ubuntu-latest
-  - ubuntu-latest
-  - macOS-latest
-  - macOS-latest
-- name: test
-  displayName: Run Tests?
-  type: boolean
-  default: false
-
-variables:
-- group: "Contoso Variable Group"
-- name: va
-  value: $[variables.a]
-- name: vb
-  value: $[variables.b]
-- name: vcontososecret
-  value: $[variables.contososecret]
-
-trigger:
-- azure-pipelines
-
-pool:
-  vmImage: ubuntu-latest
-  #name: my-win-pool
 steps:
-- script: |
-    echo "Hello, world!"
-    echo "Pool image: ${{ parameters.image }}"
-    echo "Run tests? ${{ parameters.test }}"
-  displayName: 'Show runtime parameter values'
-
-- script: |
-    echo "Middle 999"
-    echo "Pool: $(va) -- "
-    echo "run : $(vb) -- "
-  displayName: 'Middle values'
-
-- script: |
-    echo "a=$(va)"
-    echo "b=$(vb)"
-    echo a is $va or $VA, b is $vb or $VB
-
-    echo "Count up to the value of the variable group's nonsecret variable *a*:"
-    for number in {1..$(va)}
-    do
-        echo "$number"
-    done
-    echo "Count up to the value of the variable group's nonsecret variable *b*:"
-    for number in {1..$(vb)}
-    do
-          echo "$number"
-    done
-    echo "Count up to the value of the variable group's secret variable *contososecret*:"
-    for number in {1..$(vcontososecret)}
-    do
-        echo "$number"
-    done
-  displayName: 'Test variable group variables (secret and nonsecret)'
-  env:
-    SYSTEM_ACCESSTOKEN: $(System.AccessToken)
+  - bash: echo This script could use $SYSTEM_ACCESSTOKEN
+    env:
+      SYSTEM_ACCESSTOKEN: $(System.AccessToken)
+  - powershell: | 
+      Write-Host "This is a script that could use $env:SYSTEM_ACCESSTOKEN"
+      Write-Host "$env:SYSTEM_ACCESSTOKEN = $(System.AccessToken)"
+    env:
+      SYSTEM_ACCESSTOKEN: $(System.AccessToken)
