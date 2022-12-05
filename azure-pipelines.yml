@@ -27,8 +27,8 @@ trigger:
 - azure-pipelines
 
 pool:
-  vmImage: ubuntu-latest
-
+  #vmImage: ubuntu-latest
+  name: my-win-pool
 steps:
 - script: |
     echo "Hello, world!"
