@@ -24,7 +24,7 @@ variables:
   value: $[variables.contososecret]
 
 trigger:
-- master
+- azure-pipelines
 
 pool:
   vmImage: ubuntu-latest
