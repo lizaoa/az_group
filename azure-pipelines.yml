@@ -45,7 +45,8 @@ steps:
 - script: |
     echo "a=$(va)"
     echo "b=$(vb)"
-    echo  The text is $GITHUBORG/$env:githubRepo
+    helo = $a--$b
+    echo  The text is $helo
     echo "Count up to the value of the variable group's nonsecret variable *a*:"
     for number in {1..$(va)}
     do
