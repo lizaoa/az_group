@@ -5,6 +5,6 @@ steps:
   - powershell: | 
       Write-Host "This is a script that could use $env:SYSTEM_ACCESSTOKEN"
       Write-Host "$env:SYSTEM_ACCESSTOKEN = $(System.AccessToken)"
-      Write-Host $[ "$env:SYSTEM_ACCESSTOKEN = $(System.AccessToken)" ]
+      Write-Host $[ eq("$env:SYSTEM_ACCESSTOKEN = $(System.AccessToken)"), true ]
     env:
       SYSTEM_ACCESSTOKEN: $(System.AccessToken)
