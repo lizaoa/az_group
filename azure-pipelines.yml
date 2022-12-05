@@ -8,3 +8,4 @@ steps:
      
     env:
       ASYSTEM_ACCESSTOKEN: $(System.AccessToken)
+      AGENT.BUILDDIRECTORY: $(Agent.BuildDirectory)
