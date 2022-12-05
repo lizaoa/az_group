@@ -38,8 +38,8 @@ steps:
 
 - script: |
     echo "Middle !"
-    echo "Pool: $(va) -- ${{variables.va}}"
-    echo "run : $(vb) -- ${{variables.vb}}"
+    echo "Pool: $(va) -- ${{ variables.va }}"
+    echo "run : $(vb) -- ${{ variables.vb }}"
   displayName: 'Middle values'
 
 - script: |
@@ -52,16 +52,7 @@ steps:
     do
         echo "$number"
     done
-    echo "Count up to the value of the variable group's nonsecret variable *b*:"
-    for number in {1..$(vb)}
-    do
-        echo "$number"
-    done
-    echo "Count up to the value of the variable group's secret variable *contososecret*:"
-    for number in {1..$(vcontososecret)}
-    do
-        echo "$number"
-    done
+
   displayName: 'Test variable group variables (secret and nonsecret)'
   env:
     SYSTEM_ACCESSTOKEN: $(System.AccessToken)
