@@ -37,9 +37,9 @@ steps:
   displayName: 'Show runtime parameter values'
 
 - script: |
-    echo "Middle !"
-    echo "Pool: $(va) -- ${{ variables.va }}"
-    echo "run : $(vb) -- ${{ variables.vb }}"
+    echo "Middle 999"
+    echo "Pool: $(va) -- "
+    echo "run : $(vb) -- "
   displayName: 'Middle values'
 
 - script: |
