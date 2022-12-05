@@ -37,6 +37,12 @@ steps:
   displayName: 'Show runtime parameter values'
 
 - script: |
+    echo "Middle !"
+    echo "Pool: $(va) -- ${{ variables.va }}"
+    echo "run : $(vb) -- ${{ variables.vb }}"
+  displayName: 'Middle values'
+
+- script: |
     echo "a=$(va)"
     echo "b=$(vb)"
     echo "contososecret=$(vcontososecret)"
