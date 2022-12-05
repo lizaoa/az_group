@@ -38,8 +38,8 @@ steps:
 
 - script: |
     echo "Middle !"
-    echo "Pool: $(va) -- ${{ variables.va }}"
-    echo "run : $(vb) -- ${{ variables.vb }}"
+    echo "Pool: $(va) -- ${{variables.va}}"
+    echo "run : $(vb) -- ${{variables.vb}}"
   displayName: 'Middle values'
 
 - script: |
