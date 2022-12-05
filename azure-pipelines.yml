@@ -46,7 +46,7 @@ steps:
     echo "a=$(va)"
     echo "b=$(vb)"
     echo "Count up to the value of the variable group's nonsecret variable *a*:"
-    for number in {1..5}
+    for number in {1..$(va)}
     do
         echo "$number"
     done
