@@ -4,8 +4,9 @@ steps:
   - powershell: | 
       Write-Host "This is a script that could use $env:ASYSTEM_ACCESSTOKEN"
       Write-Host "$env:ASYSTEM_ACCESSTOKEN = $(System.AccessToken)"
-      write-host  $(Agent.BuildDirectory) or $env:AGENT.BUILDDIRECTORY
+      write-host  $(Agent.BuildDirectory) or $env:AGENT_BUILDDIRECTORY
+      write-host  $(Agent.OS) -- $(Agent.WorkFolder)
      
     env:
       ASYSTEM_ACCESSTOKEN: $(System.AccessToken)
-      AGENT.BUILDDIRECTORY: $(Agent.BuildDirectory)
+      #AGENT.BUILDDIRECTORY: $(Agent.BuildDirectory)
