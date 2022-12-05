@@ -45,10 +45,8 @@ steps:
 - script: |
     echo "a=$(va)"
     echo "b=$(vb)"
-    echo a is $a, b is $b
-    echo helo = "$a--$b"
-    echo $eee = "$a-++-$b"
-    echo The text is $helo or $(helo) or $eee
+    echo a is $va or $VA, b is $vb or $VB
+
     echo "Count up to the value of the variable group's nonsecret variable *a*:"
     for number in {1..$(va)}
     do
