@@ -1,6 +1,5 @@
 steps:
-- bash: 
+- bash: |
     echo "##vso[task.setvariable variable=mySecretVal;issecret=true]secretvalue"
-  name: aaa
-- bash: 
-    echo $(aaa.mySecretVal)
+- bash: |
+    echo $(mySecretVal)
