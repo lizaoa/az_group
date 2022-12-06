@@ -1,5 +1,13 @@
+variables:
+  a1: aaaa
+  b1: bbbb
+parameters:
+  - name: pa1
+    type: string
+    default: pastring
+
 trigger: none
 
 steps: 
   - bash: echo $(System.TeamProject) -- $(System.Debug)
-  - bash: echo $(Build.DefinitionName) -- $(Build.SourceVersion)
+ 
