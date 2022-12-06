@@ -1,12 +1,15 @@
 steps:
-    - bash: |
-        escape_data() {
-          local data=$1
-          data="${data//'%'/'%AZP25'}"
-          data="${data//$'\n'/'%0A'}"
-          data="${data//$'\r'/'%0D'}"
-          echo "$data"
-        }
-        echo "##vso[task.setvariable variable=myStageVal;isOutput=true]$(escape_data $'foooop')"
-      name: MyOutputVar
-    - bash: echo Ok is $(MyOutputVar.myStageVal)
+- powershell: |
+      Write-Host "My first secret variable is $env:FOO_ONE"
+      $env:FOO_ONE -eq "foo"
+  env:
+    FOO_ONE: $(SecretOne)
+- bash: |
+    echo "My second secret variable: $FOO_TWO"
+    if [ "$FOO_TWO" = "bar" ]; then
+        echo "Strings are equal."
+    else
+        echo "Strings are not equal."
+    fi
+  env:
+    FOO_TWO: $(SecretTwo)
