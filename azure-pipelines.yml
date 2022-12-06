@@ -4,8 +4,8 @@ steps:
 - bash:  echo $(mySecretVal)
 - bash: |
     if [ $(mySecretVal) = "aaa" ]; then
-       echo "it is aaa"
+       echo "it is ok"
     else
-       echo "it is not aaa"
+       echo "it is not ok"
     fi
   displayName:  if and not
