@@ -11,6 +11,6 @@ pool:
 trigger: none
 
 steps: 
-  - bash: echo agent os is -$(Agent.OS)-
-  - powershell: "##vso[task.setvariable variable=sauce]crushed tomatoes"
+  - powershell: echo agent os is -$(Agent.OS)-
+  - powershell: echo "##vso[task.setvariable variable=sauce]crushed tomatoes"
   - powershell: write-host No problem reading $env:SAUCE
