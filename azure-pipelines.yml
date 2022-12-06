@@ -1,15 +1,5 @@
-steps:
-- powershell: |
-      Write-Host "My first secret variable is $env:FOO_ONE"
-      $env:FOO_ONE -eq "foo"
-  env:
-    FOO_ONE: $(SecretOne)
+tasks:
 - bash: |
-    echo "My second secret variable: $FOO_TWO"
-    if [ $FOO_TWO = "baar" ]; then
-        echo "Strings are equal."
-    else
-        echo "Strings are not equal."
-    fi
-  env:
-    FOO_TWO: $(SecretTwo)
+    echo "##vso[task.setvariable variable=mySecretVal;issecret=true]secretvalue"
+- bash: |
+    echo $(mySecretVal)
