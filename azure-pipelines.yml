@@ -5,7 +5,9 @@ parameters:
   - name: pa1
     type: string
     default: pastring
-
+pool:
+  vmimage: windows-latest
+  
 trigger: none
 
 steps: 
