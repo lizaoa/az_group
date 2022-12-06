@@ -21,8 +21,5 @@ jobs:
     vmImage: ${{ parameters.image }}
   steps:
   - script: echo building $(Build.BuildNumber)
-  - bash: if[ $(abc) = "true" ] then
-               echo "Running all the tests"
-          else
-               echo "Not Running all the tests"
-          fi
+  - ${{ if eq($(abc), true) }}:
+    - script: echo "Running all the tests"
