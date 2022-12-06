@@ -7,6 +7,6 @@ steps:
           data="${data//$'\r'/'%0D'}"
           echo "$data"
         }
-        echo "##vso[task.setvariable variable=myStageVal;isOutput=true]$(escape_data $'foo\nbar')"
+        echo "##vso[task.setvariable variable=myStageVal;isOutput=true]$(escape_data $'foooop')"
       name: MyOutputVar
     - bash: echo Ok is $(MyOutputVar.myStageVal)
