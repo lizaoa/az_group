@@ -5,8 +5,6 @@ trigger: none
 jobs: 
 - job: stepList
   steps: 
-  - job: myStep
-  steps:
     - echo $(System.TeamProject) -- $(System.Debug)
     - echo $(Release.EnvironmentName) -- $(Release.Reason)
     - echo $(Agent.HomeDirector)  -- $(Release.Artifacts.{az_group}.DefinitionName)
