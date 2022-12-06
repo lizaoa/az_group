@@ -9,5 +9,5 @@ parameters:
 trigger: none
 
 steps: 
-  - bash: echo $(System.TeamProject) -- $(System.Debug)
- 
+  - bash: echo "##vso[task.setvariable variable=sauce]crushed tomatoes"
+  - bash:  echo "No problem reading $SAUCE"
