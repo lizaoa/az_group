@@ -12,7 +12,9 @@ trigger: none
 
 steps: 
   #- powershell: write-host "agent os is -$(Agent.OS)-"
-  - pwsh:  echo "agent os is -$(Agent.OS)-"
-  - pwsh: echo "##vso[task.setvariable variable=sauce]crushed vvvv tomatoes"
-  - pwsh: write-host "No problem reading $env:SAUCE - $(sauce)"
-  - pwsh: echo "reading $SAUCE - $(sauce)"
+  - pwsh: |
+      echo "agent os is -$(Agent.OS)-"
+      echo "##vso[task.setvariable variable=sauce]crushed vvvv tomatoes"
+      write-host "No problem reading $env:SAUCE - $(sauce)"
+      echo "reading $SAUCE - $(sauce)"
+    displayName: www rrr rtreter
