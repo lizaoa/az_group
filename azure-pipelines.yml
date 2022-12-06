@@ -12,7 +12,6 @@ parameters:
 variables:
   abc: true
 
-trigger: none
 
 jobs:
 - job: build
