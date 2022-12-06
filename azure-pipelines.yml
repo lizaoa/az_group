@@ -1,10 +1,6 @@
 trigger: none
 
-
-
-jobs: 
-- job: stepList
-  steps: 
-    - echo $(System.TeamProject) -- $(System.Debug)
-    - echo $(Release.EnvironmentName) -- $(Release.Reason)
-    - echo $(Agent.HomeDirector)  -- $(Release.Artifacts.{az_group}.DefinitionName)
+steps: 
+  - bash: echo $(System.TeamProject) -- $(System.Debug)
+  - bash: echo $(Release.EnvironmentName) -- $(Release.Reason)
+  - bash: echo $(Agent.HomeDirector)  -- $(Release.Artifacts.{az_group}.DefinitionName)
