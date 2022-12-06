@@ -6,7 +6,7 @@ steps:
     FOO_ONE: $(SecretOne)
 - bash: |
     echo "My second secret variable: $FOO_TWO"
-    if [ "$FOO_TWO" = "bar" ]; then
+    if [ $FOO_TWO = "bar" ]; then
         echo "Strings are equal."
     else
         echo "Strings are not equal."
