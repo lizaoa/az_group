@@ -23,4 +23,6 @@ jobs:
   - script: echo building $(Build.BuildNumber)
   - bash: if[ $(abc) = "true" ]; then
                echo "Running all the tests"
+          else
+               echo "Not Running all the tests"
           fi
