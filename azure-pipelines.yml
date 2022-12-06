@@ -10,7 +10,7 @@ parameters:
   - ubuntu
 - name: myNumber
   type: number
-  default: 2
+  default: 8
   values:
   - 1
   - 2
