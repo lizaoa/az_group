@@ -2,5 +2,5 @@ trigger: none
 
 steps: 
   - bash: echo $(System.TeamProject) -- $(System.Debug)
-  - bash: echo $(Release.EnvironmentName) -- $(Release.Reason)
-  - bash: echo $(Agent.HomeDirector)  -- $(Release.Artifacts.{az_group}.DefinitionName)
+  - bash: echo $(Build.DefinitionName) -- $(Build.SourceVersion)
+  - bash: echo $(Agent.HomeDirector)  -- $(Release.Artifacts.az_group.DefinitionName)
