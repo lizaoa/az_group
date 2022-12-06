@@ -1,7 +1,6 @@
 parameters:
 - name: myString
   type: string
-  default: a string
 - name: myMultiString
   type: string
   default: default
