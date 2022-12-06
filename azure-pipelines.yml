@@ -14,3 +14,4 @@ steps:
   - powershell: write-host "agent os is -$(Agent.OS)-"
   - bash: echo "##vso[task.setvariable variable=sauce]crushed vvvv tomatoes"
   - powershell: write-host No problem reading $env:SAUCE - $(sauce)
+  - bash: echo reading $SAUCE - $(sauce)
