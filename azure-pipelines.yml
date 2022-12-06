@@ -9,5 +9,5 @@ parameters:
 trigger: none
 
 steps: 
-  - bash: echo "##vso[task.setvariable variable=sauce]crushed tomatoes"
-  - bash:  echo "No problem reading $SAUCE"
+  - powershell: echo "##vso[task.setvariable variable=sauce]crushed tomatoes"
+  - powershell: echo "No problem reading $SAUCE"
