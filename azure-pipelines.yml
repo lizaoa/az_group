@@ -1,6 +1,7 @@
 parameters:
 - name: image
   displayName: Pool Image
+  default:windows-latest
   values:
   - windows-latest
   - ubuntu-latest
