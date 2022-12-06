@@ -1,5 +1,11 @@
 steps:
 - bash: |
     echo "##vso[task.setvariable variable=mySecretVal;issecret=true]secretvalue"
+- bash:  echo $(mySecretVal)
 - bash: |
-    echo $(mySecretVal)
+    if [ $(mySecretVal) = "aaa" ]; then
+       echo "it is aaa"
+    else
+       echo "it is not aaa"
+    fi
+    displayname: if and not
