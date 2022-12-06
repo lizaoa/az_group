@@ -1,12 +1,11 @@
-jobs:
-- job: A
-  steps:
-  - bash: |
-     echo "##vso[task.setvariable variable=myOutputJobVar]this is the same job"
-  - bash: |
-     echo "##vso[task.setvariable variable=myOutputJobVar;isoutput=true]this is the same job too"
-    name: setOutput
-  - bash: |
-     echo $(myJobVar) 
-  - bash: |
-     echo $(setOutput.myOutputJobVar) -- orgin is $(myOutputJobVar)
+steps:
+    - bash: |
+        escape_data() {
+          local data=$1
+          data="${data//'%'/'%AZP25'}"
+          data="${data//$'\n'/'%0A'}"
+          data="${data//$'\r'/'%0D'}"
+          echo "$data"
+        }
+        echo "##vso[task.setvariable variable=myStageVal;isOutput=true]$(escape_data $'foo\nbar')"
+      name: MyOutputVar
