@@ -1,51 +1,12 @@
-parameters:
-- name: myString
-  type: string
-- name: myMultiString
-  type: string
-  default: default
-  values:
-  - default
-  - ubuntu
-- name: myNumber
-  type: number
-  default: 8
-  values:
-  - 1
-  - 2
-  - 4
-  - 8
-  - 16
-- name: myBoolean
-  type: boolean
-  default: true
-- name: myObject
-  type: object
-  default:
-    foo: FOO
-    bar: BAR
-    things:
-    - one
-    - two
-    - three
-    nested:
-      one: apple
-      two: pear
-      count: 3
-- name: myStep
-  type: step
-  default:
-    script: echo my step
-- name: mySteplist
-  type: stepList
-  default:
-    - script: echo step 原因 one
-    - script: echo step 腐乳  two
+trigger: none
+
 
 
 jobs: 
 - job: stepList
-  steps: ${{ parameters.mySteplist }}
-- job: myStep
+  steps: 
+  - job: myStep
   steps:
-    - ${{ parameters.myStep }}
+    - echo $(System.TeamProject) -- $(System.Debug)
+    - echo $(Release.EnvironmentName) -- $(Release.Reason)
+    - echo $(Agent.HomeDirector)  -- $(Release.Artifacts.{az_group}.DefinitionName)
