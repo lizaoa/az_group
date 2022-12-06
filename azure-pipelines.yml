@@ -1,11 +1,19 @@
-steps:
-- bash: |
-    echo "##vso[task.setvariable variable=mySecretVal;issecret=true]aaa"
-- bash:  echo $(mySecretVal)
-- bash: |
-    if [ $(mySecretVal) = "aaa" ]; then
-       echo "it is ok"
-    else
-       echo "it is not ok"
-    fi
-  displayName:  if and not
+parameters:
+- name: image
+  displayName: Pool Image
+  type: string
+  default: ubuntu-latest
+  values:
+  - windows-latest
+  - ubuntu-latest
+  - macOS-latest
+
+trigger: none
+
+jobs:
+- job: build
+  displayName: build
+  pool: 
+    vmImage: ${{ parameters.image }}
+  steps:
+  - script: echo building $(Build.BuildNumber) with ${{ parameters.image }}
