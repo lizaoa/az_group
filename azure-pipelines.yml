@@ -6,7 +6,7 @@ parameters:
     type: string
     default: pastring
 pool:
-  vmimage: windows-latest
+  vmimage: ubuntu-latest
   
 trigger: none
 
