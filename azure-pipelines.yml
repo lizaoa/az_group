@@ -11,7 +11,7 @@ parameters:
   type: boolean
   default: false
 variables:
-  abc: true
+  abc: trues
 
 
 jobs:
