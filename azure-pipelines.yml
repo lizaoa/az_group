@@ -10,4 +10,4 @@ trigger: none
 
 steps: 
   - powershell: "##vso[task.setvariable variable=sauce]crushed tomatoes"
-  - bash: echo "No problem reading $env:SAUCE"
+  - powershell: echo "No problem reading $env:SAUCE"
