@@ -43,7 +43,6 @@ parameters:
     - script: echo step 原因 one
     - script: echo step 腐乳  two
 
-trigger: none
 
 jobs: 
 - job: stepList
