@@ -43,4 +43,4 @@ stages:
         script: |
           echo 'Hello inline version'
           echo $(skipMe) 
-          echo $(StageSauce)
+          echo $(StageSauce) 
