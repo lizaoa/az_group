@@ -40,8 +40,8 @@ parameters:
 - name: mySteplist
   type: stepList
   default:
-    - script: echo step one
-    - script: echo step two
+    - script: echo step 原因 one
+    - script: echo step 腐乳  two
 
 trigger: none
 
