@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: date /t
+- script: date
   displayName: Get the date
 - script: dir
   workingDirectory: $(Agent.BuildDirectory)
