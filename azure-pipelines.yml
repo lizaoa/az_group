@@ -7,10 +7,10 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
 steps:
-- script: date
+- script: date /t
   displayName: Get the date
 - script: dir
   workingDirectory: $(Agent.BuildDirectory)
