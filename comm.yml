@@ -1,10 +1,11 @@
 parameters:
 - name: c1
-  default: comm para-1
   type: string
+  default: comm para-1
+  
 
-  pool:
-    name: my-win-pools
+pool:
+  name: my-win-pools
     
-  steps:
+steps:
   - script: echo this is the common param -${{ parameters.c1 }}
