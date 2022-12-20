@@ -1,4 +1,4 @@
-parameters:https://github.com/lizaoa/az_group/blob/master/comm.yml
+parameters:
 - name: c1
   type: string
   default: 'comm para1'
