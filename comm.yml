@@ -4,4 +4,4 @@ parameters:
   default: 'comm para1'
     
 steps:
-  - script: echo this is the common param -${{ parameters.c1 }}-
+  - script: echo this is the common param 
