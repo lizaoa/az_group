@@ -1,7 +1,7 @@
-parameters:
+parameters:https://github.com/lizaoa/az_group/blob/master/comm.yml
 - name: c1
   type: string
   default: 'comm para1'
 
 steps:
-  - script: echo Second this is the common param -${{ parameters.c1 }}-
+  - script: echo First this is the common param -${{ parameters.c1 }}-
