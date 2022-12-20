@@ -2,7 +2,6 @@ parameters:
 - name: c1
   type: string
   default: 'comm para1'
-jobs:
-- job: buildTEst
-  steps:
+
+steps:
   - script: echo Second this is the common param -${{ parameters.c1 }}-
