@@ -5,4 +5,4 @@ parameters:
 jobs:
 - job: buildTEst
   steps:
-  - script: echo this is the common param -${{ parameters.c1 }}-
+  - script: echo Second this is the common param -${{ parameters.c1 }}-
